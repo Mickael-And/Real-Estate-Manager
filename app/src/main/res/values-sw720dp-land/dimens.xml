@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="real_estate_image_list">160dp</dimen>
+    <dimen name="text_size_real_estate_type">24sp</dimen>
+    <dimen name="text_size_real_estate_city">24sp</dimen>
+    <dimen name="text_size_real_estate_price">40sp</dimen>
+    <dimen name="margin_start_real_estate_list_text">22dp</dimen>
+    <dimen name="list_width_size">420dp</dimen>
+</resources>

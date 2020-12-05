@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Real estate image -->
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/real_estate_image_list"
+        android:layout_height="@dimen/real_estate_image_list"
+        android:contentDescription="@string/real_estate_list_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/exemple_maison" />
+
+    <!-- Real estate type -->
+    <TextView
+        android:id="@+id/type"
+        style="@style/RealEstateType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/city"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/city"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Appartement" />
+
+    <!-- Real estate city -->
+    <TextView
+        android:id="@+id/city"
+        style="@style/RealEstateCity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_start_real_estate_list_text"
+        app:layout_constraintBottom_toTopOf="@id/price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@id/type"
+        tools:text="Clermont-Ferrand" />
+
+    <!-- Real estate price -->
+    <TextView
+        android:id="@+id/price"
+        style="@style/RealEstatePrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/city"
+        app:layout_constraintTop_toBottomOf="@id/city"
+        tools:text="$1.120.000" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
