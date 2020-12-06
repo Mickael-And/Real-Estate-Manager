@@ -6,7 +6,7 @@
     app:startDestination="@id/detailsFragment">
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="com.openclassrooms.realestatemanager.DetailsFragment"
+        android:name="com.openclassrooms.realestatemanager.ui.DetailsFragment"
         android:label="details_fragment"
         tools:layout="@layout/details_fragment">
         <argument

@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Real Estate Manager</string>
     <string name="real_estate_list_image">Real estate list image</string>
+    <string name="appartment_type">Appartement</string>
+    <string name="house_type">Maison</string>
+    <string name="building_plot_type">Terrain constructible</string>
+    <string name="residence_type">Résidence</string>
+    <string name="loft_type">Loft</string>
 </resources>

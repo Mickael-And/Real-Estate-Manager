@@ -5,5 +5,5 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-    tools:context=".ListFragment"
+    tools:context=".ui.ListFragment"
     tools:listitem="@layout/real_estate_item" />
