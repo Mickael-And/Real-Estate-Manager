@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Real estate list -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/list_real_estates"
+    <!-- Fragment containing the list of real estate -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/master_nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="@dimen/list_width_size"
-        android:layout_height="match_parent"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/fragment_details"
+        app:layout_constraintEnd_toStartOf="@id/details_nav_host_fragment"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/real_estate_item" />
+        app:navGraph="@navigation/master_nav_graph" />
 
-    <!-- Real estate details -->
-    <fragment
-        android:id="@+id/fragment_details"
+    <!-- Fragment containing the details of a real estate -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/details_nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/list_real_estates"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@id/master_nav_host_fragment"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/details_nav_graph" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
