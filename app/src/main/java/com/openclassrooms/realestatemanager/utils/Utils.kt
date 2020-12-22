@@ -10,6 +10,8 @@ import java.util.*
  * Created by Philippe on 21/02/2018.
  */
 object Utils {
+    //TODO: Replace with extensiosn ?
+
     /**
      * Conversion d'un prix d'un bien immobilier (Dollars vers Euros)
      * NOTE : NE PAS SUPPRIMER, A MONTRER DURANT LA SOUTENANCE

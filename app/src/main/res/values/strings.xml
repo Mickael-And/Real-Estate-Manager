@@ -6,4 +6,5 @@
     <string name="building_plot_type">Terrain constructible</string>
     <string name="residence_type">Résidence</string>
     <string name="loft_type">Loft</string>
+    <!-- TODO: Faire un fichier anglais -->
 </resources>
