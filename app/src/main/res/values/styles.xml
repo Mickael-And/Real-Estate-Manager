@@ -40,4 +40,65 @@
         <item name="android:textColor">@color/colorSecondaryVariant</item>
     </style>
 
+    <!-- Details window styles -->
+    <style name="DetailsWindow" />
+
+    <!-- Details text style -->
+    <style name="DetailsWindow.Text">
+        <item name="android:textColor">@color/colorOnSurface</item>
+        <item name="android:textSize">@dimen/details_text_size</item>
+    </style>
+
+    <!-- Details label style -->
+    <style name="DetailsWindow.Text.Label">
+        <item name="maxLines">1</item>
+        <item name="android:padding">@dimen/label_padding</item>
+        <item name="android:textSize">@dimen/label_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Details label style -->
+    <style name="DetailsWindow.Text.DetailsLabel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/details_label_margin</item>
+        <item name="android:layout_marginBottom">@dimen/details_label_margin</item>
+        <item name="android:drawablePadding">@dimen/details_icon_padding</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Area label style -->
+    <style name="DetailsWindow.Text.DetailsLabel.Area">
+        <item name="android:drawableStart">@drawable/baseline_aspect_ratio_black_18</item>
+    </style>
+
+    <!-- Rooms label style -->
+    <style name="DetailsWindow.Text.DetailsLabel.Rooms">
+        <item name="android:drawableStart">@drawable/baseline_home_black_18</item>
+    </style>
+
+    <!-- Bathrooms label style -->
+    <style name="DetailsWindow.Text.DetailsLabel.Bathrooms">
+        <item name="android:drawableStart">@drawable/baseline_bathtub_black_18</item>
+    </style>
+
+    <!-- Bedrooms label style -->
+    <style name="DetailsWindow.Text.DetailsLabel.Bedrooms">
+        <item name="android:drawableStart">@drawable/baseline_local_hotel_black_18</item>
+    </style>
+
+    <!-- Location label style -->
+    <style name="DetailsWindow.Text.DetailsLabel.Location">
+        <item name="android:drawableStart">@drawable/baseline_room_black_18</item>
+    </style>
+
+    <!-- Divider style -->
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+
+
 </resources>

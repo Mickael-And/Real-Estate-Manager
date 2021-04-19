@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/room_item_margin_end">
+
+    <!-- Room photo -->
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_room"
+        android:layout_width="@dimen/room_item_img_size"
+        android:layout_height="@dimen/room_item_img_size"
+        android:contentDescription="@string/room_img_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/exemple_maison" />
+
+    <!-- Room label -->
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/room_label_background"
+        android:padding="@dimen/room_item_label_padding"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/details_text_size"
+        app:layout_constraintBottom_toBottomOf="@id/img_room"
+        app:layout_constraintEnd_toEndOf="@id/img_room"
+        app:layout_constraintStart_toStartOf="@id/img_room"
+        tools:text="Kitchen" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

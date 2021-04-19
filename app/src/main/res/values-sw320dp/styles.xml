@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Area label style -->
+    <style name="DetailsWindow.Text.DetailsLabel.Area">
+        <item name="android:drawableStart">@drawable/baseline_aspect_ratio_black_18</item>
+    </style>
+
+    <!-- Rooms label style -->
+    <style name="DetailsWindow.Text.DetailsLabel.Rooms">
+        <item name="android:drawableStart">@drawable/baseline_home_black_18</item>
+    </style>
+
+    <!-- Bathrooms label style -->
+    <style name="DetailsWindow.Text.DetailsLabel.Bathrooms">
+        <item name="android:drawableStart">@drawable/baseline_bathtub_black_18</item>
+    </style>
+
+    <!-- Bedrooms label style -->
+    <style name="DetailsWindow.Text.DetailsLabel.Bedrooms">
+        <item name="android:drawableStart">@drawable/baseline_local_hotel_black_18</item>
+    </style>
+
+    <!-- Location label style -->
+    <style name="DetailsWindow.Text.DetailsLabel.Location">
+        <item name="android:drawableStart">@drawable/baseline_room_black_18</item>
+    </style>
+
+</resources>

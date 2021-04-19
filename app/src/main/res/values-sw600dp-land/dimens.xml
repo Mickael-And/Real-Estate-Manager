@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Dimens of real estate list item-->
     <dimen name="real_estate_image_list">130dp</dimen>
     <dimen name="text_size_real_estate_type">19sp</dimen>
     <dimen name="text_size_real_estate_city">19sp</dimen>
     <dimen name="text_size_real_estate_price">34sp</dimen>
     <dimen name="margin_start_real_estate_list_text">20dp</dimen>
+
+    <!-- Dimens of content main -->
     <dimen name="list_width_size">350dp</dimen>
+
 </resources>

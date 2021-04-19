@@ -6,5 +6,13 @@
     <string name="building_plot_type">Terrain constructible</string>
     <string name="residence_type">Résidence</string>
     <string name="loft_type">Loft</string>
+    <string name="room_img_description">Image of a room of real estate</string>
+    <string name="media_label">Media</string>
+    <string name="description_label">Description</string>
+    <string name="area_label">Area</string>
+    <string name="rooms_number_label">Rooms</string>
+    <string name="bathrooms_number_label">Bathrooms</string>
+    <string name="bedrooms_number_label">Bedrooms</string>
+    <string name="location_label">Location</string>
     <!-- TODO: Faire un fichier anglais -->
 </resources>

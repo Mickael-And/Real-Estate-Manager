@@ -1,13 +1,222 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".ui.DetailsFragment">
 
-    <TextView
+    <!-- View container -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello" />
+        android:orientation="vertical"
+        android:padding="@dimen/details_padding">
 
-</FrameLayout>
+        <!-- Real estate rooms -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/media_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Container label -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lbl_rooms_list"
+                style="@style/DetailsWindow.Text.Label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/media_label"
+                app:layout_constraintBottom_toTopOf="@id/rooms_list"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- List of real estate rooms -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rooms_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lbl_rooms_list"
+                tools:listitem="@layout/room_item" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Divider -->
+        <View style="@style/Divider" />
+
+        <!-- Real estate description -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/description_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Container label -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lbl_description"
+                style="@style/DetailsWindow.Text.Label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/description_label"
+                app:layout_constraintBottom_toTopOf="@id/description"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Real estate description -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/description"
+                style="@style/DetailsWindow.Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lbl_description"
+                tools:text="Finierat imperator sollemnitate quod accidisse ratione malis in fortunam autem tantum foedere quod omnis civilibus imperator discessit externa malis voluit vigilasse ea malis haec vigilasse icto voluit civilibus ad quod norat quae crebris multitudo eius ad autem ritu imperator discessit in foedere quae malis ad autem voluit externa crebris Mediolanum omnis malis ea dicta laudato multitudo omnis luctuosa finierat imperator fortunam accidisse crebris post foedere ratione moverentur percita percita post bella ad multitudo externa eius ad consilio consili." />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Divider -->
+        <View style="@style/Divider" />
+
+        <!-- Real estate details -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/details_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Area label -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lbl_area"
+                style="@style/DetailsWindow.Text.DetailsLabel.Area"
+                android:text="@string/area_label"
+                app:layout_constraintBottom_toTopOf="@id/area"
+                app:layout_constraintStart_toStartOf="@id/lbl_bathrooms_number"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Rooms numbers label -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lbl_rooms_number"
+                style="@style/DetailsWindow.Text.DetailsLabel.Rooms"
+                android:text="@string/rooms_number_label"
+                app:layout_constraintBottom_toBottomOf="@id/lbl_area"
+                app:layout_constraintStart_toStartOf="@id/lbl_bedrooms_number"
+                app:layout_constraintTop_toTopOf="@id/lbl_area" />
+
+            <!-- Real estate area -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/area"
+                style="@style/DetailsWindow.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/lbl_bathrooms_number"
+                app:layout_constraintEnd_toEndOf="@id/lbl_bathrooms_number"
+                app:layout_constraintStart_toStartOf="@id/lbl_bathrooms_number"
+                app:layout_constraintTop_toBottomOf="@id/lbl_area"
+                tools:text="750 sqm" />
+
+            <!-- Real etsate rooms number -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/rooms_number"
+                style="@style/DetailsWindow.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/area"
+                app:layout_constraintEnd_toEndOf="@id/lbl_bedrooms_number"
+                app:layout_constraintStart_toStartOf="@id/lbl_bedrooms_number"
+                app:layout_constraintTop_toTopOf="@id/area"
+                tools:text="7" />
+
+            <!-- Bathrooms number label -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lbl_bathrooms_number"
+                style="@style/DetailsWindow.Text.DetailsLabel.Bathrooms"
+                android:text="@string/bathrooms_number_label"
+                app:layout_constraintBottom_toTopOf="@id/bathrooms_number"
+                app:layout_constraintEnd_toStartOf="@id/lbl_bedrooms_number"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/area"
+                app:layout_constraintVertical_chainStyle="spread_inside" />
+
+            <!-- Bedrooms number label -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lbl_bedrooms_number"
+                style="@style/DetailsWindow.Text.DetailsLabel.Bedrooms"
+                android:text="@string/bedrooms_number_label"
+                app:layout_constraintBottom_toBottomOf="@id/lbl_bathrooms_number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/lbl_bathrooms_number"
+                app:layout_constraintTop_toTopOf="@id/lbl_bathrooms_number" />
+
+            <!-- Real estate bathrooms number -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/bathrooms_number"
+                style="@style/DetailsWindow.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/lbl_bathrooms_number"
+                app:layout_constraintStart_toStartOf="@id/lbl_bathrooms_number"
+                app:layout_constraintTop_toBottomOf="@id/lbl_bathrooms_number"
+                tools:text="5" />
+
+            <!-- Real estate bedrooms number -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/bedrooms_number"
+                style="@style/DetailsWindow.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/bathrooms_number"
+                app:layout_constraintEnd_toEndOf="@id/lbl_bedrooms_number"
+                app:layout_constraintStart_toStartOf="@id/lbl_bedrooms_number"
+                app:layout_constraintTop_toTopOf="@id/bathrooms_number"
+                tools:text="2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Divider -->
+        <View style="@style/Divider" />
+
+        <!-- Real estate location -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/location_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Location label -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lbl_location"
+                style="@style/DetailsWindow.Text.DetailsLabel.Location"
+                android:text="@string/location_label"
+                app:layout_constraintBottom_toTopOf="@id/location"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Location -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/location"
+                style="@style/DetailsWindow.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lbl_location"
+                tools:text="740 Park Avenue - Apt 6/7A - New York - NY 10021 - United States" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Divider -->
+        <View style="@style/Divider" />
+
+        <!-- Real estate maps location -->
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mini_map"
+            android:layout_width="@dimen/details_map_size"
+            android:layout_height="@dimen/details_map_size"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

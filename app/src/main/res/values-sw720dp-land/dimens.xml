@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Dimens of real estate list item-->
     <dimen name="real_estate_image_list">160dp</dimen>
     <dimen name="text_size_real_estate_type">24sp</dimen>
     <dimen name="text_size_real_estate_city">24sp</dimen>
     <dimen name="text_size_real_estate_price">40sp</dimen>
     <dimen name="margin_start_real_estate_list_text">22dp</dimen>
+
+    <!-- Dimens of content main -->
     <dimen name="list_width_size">420dp</dimen>
+
+    <!-- Dimens of details fragment -->
+    <dimen name="room_item_img_size">340dp</dimen>
+    <dimen name="details_padding">11dp</dimen>
+    <dimen name="label_padding">11dp</dimen>
+    <dimen name="label_text_size">34sp</dimen>
+    <dimen name="details_text_size">31sp</dimen>
+    <dimen name="details_icon_padding">16dp</dimen>
+    <dimen name="details_label_margin">11dp</dimen>
+    <dimen name="details_map_size">420dp</dimen>
 </resources>
